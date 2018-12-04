@@ -1,0 +1,51 @@
+doctype html
+html
+	head
+		title #{title} - FullStack Vietnam
+		link(rel='stylesheet', href='/css/style.css')
+	body
+		header
+			.navbar
+				.navbar-brand
+					a(href="/")
+						img(src="./img/logo.png", alt="logo").img-fluid
+						span Kaiser-Wilhelm
+				.navbar-nav
+					.nav
+						ul.list-inline
+							li.list-inline-item
+								form
+									.form-group
+										input#InputKey.form-control(type='text', placeholder='Tìm kiếm')
+							li.list-inline-item
+								a(href="#")
+									p.text-username Kaiser Wilhem
+							li.list-inline-item
+								a(href="#")
+									i.fa.fa-user-circle
+		main.py-3
+			.container-fluid
+				.row
+					.col-3.col-sm-2.col-md-1.side-bar
+						ul.list-unstyled
+							li
+								a(href="/")
+									i.fas.fa-th
+							li
+								a(href="/about")
+									i.fas.fa-plus
+							li
+								a(href="/users")
+									i.fas.fa-user
+							li
+								a(href="#")
+									i.fas.fa-cog 
+							li
+								a(href="#")
+									i.fas.fa-save
+							li
+								a(href="#")
+									i.fas.fa-question
+					.col
+						block content
+		script(src="/js/main.js")
