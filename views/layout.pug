@@ -3,6 +3,8 @@ html
 	head
 		title #{title} - FullStack Vietnam
 		link(rel='stylesheet', href='/css/style.css')
+		
+
 	body
 		header
 			.navbar
@@ -24,21 +26,21 @@ html
 								a(href="#")
 									i.fa.fa-user-circle
 		main.py-3
-			.container-fluid
-				.row
+			.container-fluid.no-gutters
+				.row.no-gutters
 					.col-3.col-sm-2.col-md-1.side-bar
 						ul.list-unstyled
 							li
 								a(href="/")
 									i.fas.fa-th
 							li
-								a(href="/about")
+								a(href="/addTask")
 									i.fas.fa-plus
 							li
 								a(href="/users")
 									i.fas.fa-user
 							li
-								a(href="#")
+								a(href="/setting")
 									i.fas.fa-cog 
 							li
 								a(href="#")
@@ -48,4 +50,8 @@ html
 									i.fas.fa-question
 					.col
 						block content
+		script(src='https://code.jquery.com/jquery-1.12.4.js')
+		script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
 		script(src="/js/main.js")
+		
+

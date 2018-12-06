@@ -1,0 +1,64 @@
+extends layout
+
+block content
+	section.add-task-form
+		.container
+			.row
+				.col-12.col-md-9
+					form
+						.form-group
+							input#taskName.form-control(type='text', placeholder='Task Name')
+						.row
+							.col-6
+								.input-group.mb-3
+									.input-group-prepend
+										label.input-group-text(for='inputGroupPriority') Priority Level
+									select#inputGroupPriority.custom-select
+										option(value='3') Low
+										option(selected='' value='1') Normal
+										option(value='2') Medium
+										option(value='3') High
+										
+
+							.col-6
+								.input-group.mb-3
+									.custom-file
+										input#inputGroupFile02.custom-file-input(type='file')
+										label.custom-file-label(for='inputGroupFile02') Choose file
+						.row
+							.col-6
+								.input-group.mb-3
+									.input-group-prepend
+										span#inputGroup-sizing-default.input-group-text Creators
+									input.form-control(type='text', aria-label='Default', aria-describedby='inputGroup-sizing-default' value= 'Admin')
+										
+
+							.col-6
+								.input-group.mb-3
+									.input-group-prepend
+										label.input-group-text(for='inputGroupPriority') To
+									select#inputGroupPriority.custom-select
+										option(value='3') Admin
+										option(selected='' value='1') Manager
+										option(value='2') User
+										option(value='3') Sudo
+						.row
+							.col-6
+								.form-group.row
+									p
+										| Date: 
+										input#datepicker(type='text')
+
+							.col-6
+								.input-group.mb-3
+									.input-group-prepend
+										span#inputGroup-sizing-default.input-group-text Creators
+									input.form-control(type='text', aria-label='Default', aria-describedby='inputGroup-sizing-default' value= 'Admin')
+										
+
+					
+
+				.col-12.col-md-3
+					p Lorem ipsum dolor 
+						| sit amet consectetur adipisicing elit. Vitae quisquam quo laudantium aperiam ea officiis sequi asperiores, reiciendis, necessitatibus 
+						| consectetur error, voluptas ipsam veniam tenetur tempore saepe? Necessitatibus, minima veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam quo laudantium aperiam ea officiis sequi asperiores, reiciendis, necessitatibus consectetur error, voluptas ipsam veniam tenetur tempore saepe? Necessitatibus, minima veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam quo laudantium aperiam ea officiis sequi asperiores, reiciendis, necessitatibus consectetur error, voluptas ipsam veniam tenetur tempore saepe? Necessitatibus, minima veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam quo laudantium aperiam ea officiis sequi asperiores, reiciendis, necessitatibus consectetur error, voluptas ipsam veniam tenetur tempore saepe? Necessitatibus, minima veritatis.

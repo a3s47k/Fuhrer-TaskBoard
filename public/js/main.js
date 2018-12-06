@@ -1,2 +1,4 @@
-// Code 
-console.log('FullStack Vietnam')
+$(function () {
+	$("#datepicker").datepicker();
+	console.log('asdasd')
+});

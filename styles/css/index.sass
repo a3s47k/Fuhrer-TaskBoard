@@ -1,4 +1,183 @@
+
+$content-n: 'N';
+$content-m: 'M';
+$content-h: 'H';
+$content-l: 'L';
+
+=original-box($mau-chu-status: #000,$mau-nen-status: #000,$chu-status:$content-n,$chu-title:#000)
+	border-radius: .3rem
+	margin: 0.5rem 0
+	position: relative
+	width: 100%
+	
+	.right-arrow
+		position: absolute
+		right: 0
+		z-index: 10
+		margin-right: auto
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 100%
+		background: #e6e6e6
+		width: 1.5rem
+		a
+			padding: 2rem 0.5rem
+			text-decoration: none
+			color: #000
+			i
+	.box-item-header
+		width: 100%
+		margin-left: 0.5rem
+		min-height: 4rem
+		position: relative
+		&:before
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			overflow: hidden
+			position: absolute
+			color: $mau-chu-status
+			top: .5rem
+			left: 0
+			background: $mau-nen-status
+			content: $chu-status
+			width: 2.5rem
+			height: 2.5rem
+			line-height: 2.5rem
+			font-size: 1.5rem
+			font-weight: 500
+		
+		
+
+		.part-1
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-right: 2rem
+			.text-title
+				margin: 0.5rem 0 0 3rem
+				a
+					color: $chu-title
+					text-transform: uppercase
+					font-weight: 500
+					text-decoration: none
+					span
+						font-weight: 300
+			.open-file
+				.upload-btn-wrapper
+					position: relative
+					overflow: hidden
+					display: inline-block
+					.btn
+						color: #00da00
+						background-color: white
+						padding: .1rem .5rem
+						font-size: .8rem
+						font-weight: bold
+						i
+							margin-left: 0.5rem
+					input[type=file]
+						font-size: .8rem
+						position: absolute
+						left: 0
+						top: 0
+						opacity: 0
+		.part-2
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-right: 2.5rem
+			box-shadow: 0 0.5px 0 #8a8a8a
+			.arrow-toggle
+				display: flex
+				justify-content: center
+				align-items: center
+				border: 1px solid #e6e6e6
+				border-radius: 0.2rem
+				width: 1.75rem
+				height: 1.75rem
+				a
+					padding: 0 0.5rem
+					line-height: 1.75rem
+					text-decoration: none
+					i
+			.priority-task
+				.priority-text
+					color: #e6e6e6
+					margin-left: 3rem
+	.box-item-show
+		display: none
+		margin-right: 2.2rem
+		margin-left: 0.5rem
+		.box-item-show-part-1
+			+item-part
+			.status-1
+				font-weight: 400
+				font-size: 0.8rem
+				font-family: none
+			.status-2
+				font-weight: 400
+				font-size: 0.8rem
+				color: #181818
+				&:first-letter
+					text-transform: uppercase
+			.status-3
+				font-weight: 400
+				font-size: 0.8rem
+				color: #181818
+				&:first-letter
+					text-transform: uppercase
+		.box-item-show-part-2
+			+item-part
+			.time-1
+				font-size: 0.8rem
+				color: #6f6f6f
+		.box-item-show-part-3
+			+item-part
+			.time-2
+				font-size: 0.8rem
+				color: #6f6f6f
+=item-part()
+	min-height: 3rem
+	width: 100%
+	display: inline-flex
+	justify-content: space-between
+	align-items: center
+	box-shadow: 0 0.5px 0 #8a8a8a
+	color: #868686
+	i
+		font-size: 1.2rem
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		
+		p
+			margin: 0 0
+			margin-left: 0.5rem
+			font-weight: 300
+			font-size: 1rem
+			color: #181818
+			&:first-letter
+				text-transform: uppercase
+		a
+			text-decoration: none
+			color: #181818
+			p
+				margin: 0 0
+				margin-left: 0.5rem
+				font-weight: 300
+				font-size: 1rem
+				&:first-letter
+					text-transform: uppercase
+	p
+		margin: 0 0
+
 body
+	.no-gutter
+		padding-right: 0
+		padding-left: 0
 	.home-task
 		display: flex
 		justify-content: space-between
@@ -27,5 +206,14 @@ body
 						font-size: 1rem
 			.home-task-box-body
 				height: 100%
-				.home-task-box-item
-					background: grey
+				ul
+					padding: 0.5rem 0.55rem 0.5rem 0.75rem
+					list-style-type: none
+				.home-task-box-item-cyan
+					+original-box( #3baad4,cyan,$content-n,blue)
+				.home-task-box-item-green
+					+original-box(#32af32,#afffb5,$content-m,#32af32)
+				.home-task-box-item-grey
+					+original-box( #888,#e4e4e4,$content-l,#888)
+				.home-task-box-item-red
+					+original-box( #c95b5b,#f0e3ca,$content-h,#c95b5b)

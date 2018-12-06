@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	.container-fluid
+	.container-fluid.no-gutter
 		.row.home-task
 			.col-12.col-lg-4
 				.home-task-box.box-shadow-1
@@ -10,20 +10,155 @@ block content
 						button.btn.btn-primary(type='button')
 							i.fas.fa-sync
 					.home-task-box-body
-						.container
-							.row
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
+						ul.list-unstyled.home-task-box-task
+							li.home-task-box-item-cyan.box-shadow-4.status-blue
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+							li.home-task-box-item-green.box-shadow-4.status-green
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+								
+							li.home-task-box-item-red.box-shadow-4.status-red
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+								
+							li.home-task-box-item-grey.box-shadow-4.status-grey
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+								
+										
 			.col-12.col-lg-4
 				.home-task-box.box-shadow-2
 					.home-task-box-head.blue
@@ -31,21 +166,153 @@ block content
 						button.btn.btn-primary(type='button')
 							i.fas.fa-sync
 					.home-task-box-body
-						.container
-							.row
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-									
+						ul.list-unstyled.home-task-box-task
+							li.home-task-box-item-cyan.box-shadow-4.status-blue
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+							li.home-task-box-item-green.box-shadow-4.status-green
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+								
+							li.home-task-box-item-red.box-shadow-4.status-red
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+								
+							li.home-task-box-item-grey.box-shadow-4.status-grey
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
 			.col-12.col-lg-4
 				.home-task-box.box-shadow-3
 					.home-task-box-head.green
@@ -53,17 +320,150 @@ block content
 						button.btn.btn-primary(type='button')
 							i.fas.fa-sync
 					.home-task-box-body
-						.container
-							.row
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
-								.col-12
-									.home-task-box-item
-										p Lorem ipsum dolor
+						ul.list-unstyled.home-task-box-task
+							li.home-task-box-item-cyan.box-shadow-4.status-blue
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+							li.home-task-box-item-green.box-shadow-4.status-green
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+								
+							li.home-task-box-item-red.box-shadow-4.status-red
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago
+								
+							li.home-task-box-item-grey.box-shadow-4.status-grey
+								.right-arrow
+										a(href="#")
+											i.fas.fa-angle-right
+								.box-item-header
+									.part-1
+										.text-title
+											a(href="#") K-DB-9: 
+												span Lorem ipsum dolor sit 
+										.open-file
+											.upload-btn-wrapper
+												button.btn View PDF
+													i.fas.fa-file-pdf
+												input(type='file', name='myfile')
+									.part-2
+										.priority-task
+											p.priority-text Gấp
+										.arrow-toggle
+											a(href="#")
+												i.fas.fa-angle-down
+								.box-item-show
+									.box-item-show-part-1
+										i.fas.fa-briefcase 
+											p.status-1 chưa xác định
+										p.status-2 chưa xác định
+										p.status-3 chưa xác định
+									.box-item-show-part-2
+										i.fas.fa-user
+											a(href="#")
+												p.author Author 
+										p.time-1 6 months ago
+									.box-item-show-part-3
+										i.fa.fa-cog 
+											a(href="#")
+												p.config Edit
+										p.time-2 6 months ago

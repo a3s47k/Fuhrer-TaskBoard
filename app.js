@@ -5,11 +5,12 @@ var cookieParser = require('cookie-parser');
 var sassMiddleware = require('node-sass-middleware');
 // Gọi Route
 var indexRouter = require('./routes/index');
-var aboutRouter = require('./routes/about');
+var addTaskRouter = require('./routes/addTask');
 var usersRouter = require('./routes/users');
 var usersDetailRouter = require('./routes/usersdetails');
 var formRouter = require('./routes/form');
 var formSave = require('./routes/save');
+var settingRouter = require('./routes/setting');
 // My route
 var homeRouter = require('./routes/home');
 // Khởi tạo APP
@@ -41,13 +42,15 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 // Init App
 app.use('/', indexRouter);
-app.use('/about', aboutRouter);
+app.use('/addTask', addTaskRouter);
 app.use('/users', usersRouter);
 app.use('/user', usersDetailRouter);
 app.use('/form', formRouter);
 app.use('/save', formSave);
 //My redirectlink
 app.use('/home', homeRouter);
+app.use('/setting', settingRouter);
+
 // Yoink
 app.get('/logout', function (req, res, next) {
 	req.logout()
