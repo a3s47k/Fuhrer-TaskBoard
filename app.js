@@ -13,6 +13,7 @@ var formSave = require('./routes/save');
 var settingRouter = require('./routes/setting');
 // My route
 var homeRouter = require('./routes/home');
+var addUserRouter = require('./routes/addUser');
 // Khởi tạo APP
 var app = express();
 // Call DB //////////////////////
@@ -50,6 +51,7 @@ app.use('/save', formSave);
 //My redirectlink
 app.use('/home', homeRouter);
 app.use('/setting', settingRouter);
+app.use('/addUser', addUserRouter);
 
 // Yoink
 app.get('/logout', function (req, res, next) {
