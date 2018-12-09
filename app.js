@@ -3,17 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var sassMiddleware = require('node-sass-middleware');
-// Gọi Route
-var indexRouter = require('./routes/index');
-var addTaskRouter = require('./routes/addTask');
-var usersRouter = require('./routes/users');
-var usersDetailRouter = require('./routes/usersdetails');
-var formRouter = require('./routes/form');
-var formSave = require('./routes/save');
-var settingRouter = require('./routes/setting');
-// My route
-var homeRouter = require('./routes/home');
-var addUserRouter = require('./routes/addUser');
+
 // Khởi tạo APP
 var app = express();
 // Call DB //////////////////////
@@ -28,7 +18,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Lỗi kết nối CSDL'));
 // Call DB //////////////////////
 // Gọi Template
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'pug');
 // Cấu hình
 app.use(express.json());
@@ -41,17 +31,7 @@ app.use(sassMiddleware({
   sourceMap: app.get('env') === 'development' ? false : true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-// Init App
-app.use('/', indexRouter);
-app.use('/addTask', addTaskRouter);
-app.use('/users', usersRouter);
-app.use('/user', usersDetailRouter);
-app.use('/form', formRouter);
-app.use('/save', formSave);
-//My redirectlink
-app.use('/home', homeRouter);
-app.use('/setting', settingRouter);
-app.use('/addUser', addUserRouter);
+require('./app/routes')(app);
 
 // Yoink
 app.get('/logout', function (req, res, next) {

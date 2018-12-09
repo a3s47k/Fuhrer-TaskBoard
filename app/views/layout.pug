@@ -3,6 +3,8 @@ html
 	head
 		title #{title} - FullStack Vietnam
 		link(rel='stylesheet', href='/css/style.css')
+		link(rel='stylesheet', href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css')
+
 		
 
 	body
@@ -12,25 +14,30 @@ html
 					a(href="/")
 						img(src="./img/logo.png", alt="logo").img-fluid
 						span Kaiser-Wilhelm
+				button.hamburger.hamburger--emphatic(type='button')
+					span.hamburger-box
+						span.hamburger-inner
 				.navbar-nav
-					.nav
+					.nav.user-navbar
 						ul.list-inline
 							li.list-inline-item
 								form
 									.form-group
 										input#InputKey.form-control(type='text', placeholder='Tìm kiếm')
-							li.list-inline-item
-								a(href="#")
-									p.text-username Kaiser Wilhem
-							li.list-inline-item
-								a(href="#")
-									i.fa.fa-user-circle
-		main.py-3
-			.container-fluid.no-gutters
+							li.list-inline-item.drop-down.hide
+								a(href="#") Kaiser Wilhem
+								i.fa.fa-user-circle
+								.drop-down-menu.hide
+									a(href="#").dropdown-item Phone
+									a(href="#").dropdown-item Email
+						
+								
+		main
+			.container-fluid.no-gutters.no-pad
 				.row.no-gutters
 					.col-3.col-sm-2.col-md-1.side-bar
 						ul.list-unstyled
-							li
+							li.active
 								a(href="/")
 									i.fas.fa-th
 							li
@@ -43,7 +50,7 @@ html
 								a(href="/setting")
 									i.fas.fa-cog 
 							li
-								a(href="#")
+								a(href="/saveTask")
 									i.fas.fa-save
 							li
 								a(href="#")
@@ -52,6 +59,6 @@ html
 						block content
 		script(src='https://code.jquery.com/jquery-1.12.4.js')
 		script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+		script(src='https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js')
 		script(src="/js/main.js")
-		
 

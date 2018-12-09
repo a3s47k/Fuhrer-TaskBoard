@@ -1,0 +1,106 @@
+extends layout
+
+block content
+	section.add-user-form
+		.container
+			.row
+				.col-12
+					.form-head
+						.row
+							.col
+								h5 Add Account
+					.form-container
+						form#addAccountForm.form-body
+							.row
+								.col-6
+									.form-group
+										input#taskName.form-control(type='text',name='username' placeholder='Username')
+								.col-6
+									.form-group
+										input#taskName.form-control(type='text',name='password' placeholder='Password')
+							.row
+								.col-6
+									.form-group
+										input#taskName.form-control(type='text',name='email' placeholder='Email')
+								.col-6
+									.form-group
+										input#taskName.form-control(type='text',name='fullName' placeholder='Full Name')
+							.row
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow edit daskboard
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow create task
+							.row
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow edit system setting
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow edit task
+							.row
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow add/edit user
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow delete task
+							.row
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow view list of user
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow save task
+							.row
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow view user detail
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow view task detail
+							.row
+								.col-6
+								.col-6
+									.input-group.mb-3
+										label.switch 
+											input#editor-toggle(type='checkbox') 
+											span.slider.round 
+										p.toggle-on Allow move task
+							.row
+								.col-6
+								.col-6
+									.save-user
+										a(href="").btn.btn-primary Save
+											i.fas.fa-save

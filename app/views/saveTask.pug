@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	section.save-task-table
+		.container
+			.row.task-list-head
+				.col-12
+					h1= title
+				
+			.row
+				.col-12
+					table.table.table-bordered
+						thead.thead-dark
+							tr 
+								th Username
+								th Create
+								th Email
+						tbody
+							- for(var user in data)
+								tr 
+									td
+										a(href="/user/"+data[user].key)=data[user].username
+									td=data[user].createdAt
+									td=data[user].email

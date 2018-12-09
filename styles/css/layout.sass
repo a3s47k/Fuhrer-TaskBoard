@@ -19,9 +19,16 @@ header
 					color: #000000
 					font-weight: 500
 					text-transform: uppercase
+		.hamburger
+			display: block
+			margin: auto 0
+			outline: none
+			.hamburger-box
+				.hamburger-inner
+
 		.navbar-nav
 			margin: auto 0
-			
+			display: none
 			.nav
 				ul
 					display: inline-flex
@@ -30,50 +37,129 @@ header
 					list-style-type: none
 					margin-bottom: 0
 					li
+						
+						display: flex
+						justify-content: center
+						align-items: center
 						form
 							.form-group
 								margin-bottom: 0
 						a
+							line-height: 3rem
 							text-decoration: none
 							color: #000
 							.text-username
 								margin-bottom: 0
-							i
-								font-size: 2.5rem
+						i
+							margin: 0 2rem 0 .5rem
+							font-size: 1.5rem
+					.drop-down
+						float: left
+						position: relative
+						.drop-down-menu
+							z-index: 99
+							position: absolute
+							background: white
+							border: 1px solid grey
+							min-width: 10rem
+							margin: 4rem 0 0 0
+							a
+								line-height: 2rem
+						
+							&:before,&:after
+								bottom: 100%
+								left: 20%
+								border: solid
+								content: " "
+								height: 0
+								width: 0
+								position: absolute
+								pointer-events: none
+							&:before
+								border-color: rgba(156, 156, 156, 0)
+								border-bottom-color: black
+								border-width: 15px
+								margin-left: -15px
+							&:after
+								border-color: rgba(255, 255, 255, 0)
+								border-bottom-color: #ffffff
+								border-width: 14px
+								margin-left: -14px
+						.hide
+							display: none
+						.show
+							display: block
+							.dropdown-item
+								color: black
+								float: none
+								text-align: left
+								&:hover
+									background: $cyan
+		+media-breakpoint-up(sm)
+			
+		+media-breakpoint-up(md)
+			.hamburger
+				display: none
+			.navbar-nav
+				display: block
+		+media-breakpoint-up(lg)
+		+media-breakpoint-up(xl)
+.no-pad
+	padding-left: 0
+	padding-right: 0
 main
+	min-width: 25.714285714285715rem
 	.side-bar
-		max-width: 4rem
+		padding-top: 2rem
+		max-width: 55px
+		width: calc(100%-55px)
+		height: 100vh
+		-webkit-box-shadow: inset -1px 0px 0px 0px rgba(0,0,0,0.25) , 2px 1px 3px -1px rgba(0,0,0,0.25)
+		-moz-box-shadow: inset -1px 0px 0px 0px rgba(0,0,0,0.25) ,2px 1px 3px -1px rgba(0,0,0,0.25)
+		box-shadow: inset -1px 0px 0px 0px rgba(0,0,0,0.25) , 2px 1px 3px -1px rgba(0,0,0,0.25)
 		position: relative
-		&:before
-			content: ''
-			display: block
-			position: absolute
-			background: rgba(#8a8a8a,0.1)
-			width: 1px
-			height: 100%
-			top: -1rem
-			left: 3.25rem
+
 		ul
 			list-style-type: none
 			li
-				display: flex
-				justify-content: center
-				align-items: center
-				margin-bottom: 1rem
-				width: 2.5rem
-				height: 2.5rem
-				border-radius: 50%
-				overflow: hidden
-				background: rgba(#8a8a8a,0.1)
+				position: relative
 				&:hover
-					background: rgba(#8a8a8a,0.2)
-					color: rgba(#fff,0.9)
-				&:last-child
-					margin-bottom: 0
+					a
+						background: rgba(#8a8a8a,0.6)
+						color: rgba(#fff,0.9)
+				&.active
+					&:before 
+						right: -2px
+						top: 50%
+						border: solid transparent
+						content: " "
+						height: 0
+						width: 0
+						position: absolute
+						pointer-events: none
+					&:before 
+						border-color: rgba(194, 225, 245, 0)
+						border-right-color: #fff
+						border-width: 10px
+						margin-top: -10px
+					a
+						background: rgba(#8a8a8a,0.8)
+						color: rgba(#fff,0.9)
+										
+				
+					
+
+
 				a
-					padding: 0 1rem
+					overflow: hidden
+					width: calc(100%-1px)
+					height: 4rem
+					background: rgba(#8a8a8a,0.2)
+					display: flex
+					justify-content: center
+					align-items: center
 					text-decoration: none
 					color: #8a8a8a
 					line-height: 2.5rem
-					font-size: 1rem
-				
+					font-size: 1.5rem
+	

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	section.user-list
+		.container
+			.row.user-list-head
+				.col-6
+					h1= title
+				.col-6
+					a.btn.btn-primary(href="/addUser") Add User
+			.row
+				.col-12
+					table.table.table-bordered
+						thead.thead-dark
+							tr 
+								th Username
+								th Create
+								th Email
+						tbody
+							- for(var user in data)
+								tr 
+									td
+										a(href="/user/"+data[user].key)=data[user].username
+									td=data[user].createdAt
+									td=data[user].email
