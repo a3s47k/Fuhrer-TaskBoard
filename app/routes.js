@@ -11,4 +11,6 @@ module.exports = function (app) {
    app.use('/home',require('./controllers/home'));
    app.use('/addUser',require('./controllers/addUser'));
    app.use('/saveTask',require('./controllers/saveTask'));
+   app.use('/login',require('./controllers/login'));
+   app.use('/check',require('./controllers/check'));
 };

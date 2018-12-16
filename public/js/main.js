@@ -1,5 +1,4 @@
 $(function () {
-	startUp()
 	dropdownMenu()
 	toggleTask()
 	hamburger()
@@ -8,23 +7,67 @@ $(function () {
 })
 
 
-function startUp(){
+var data = [{
+	"id": 1,
+	"name": "QQQQ",
+	"author": "No more sorrow",
+	"timesCreate": "6 month",
+	"timeEdit": "2 mongth",
+}, {
+	"id": 2,
+	"name": "KKKK",
+	"author": "No more sorrow",
+	"timesCreate": "6 month",
+	"timeEdit": "2 mongth",
 
-	var taskCyan = document.getElementById('taskCyan');
-	var taskGreen = document.getElementById('taskGreen');
-	var taskRed = document.getElementById('taskRed');
+}]
+var G_APP = {
+	list: ['taskCyan', 'taskGreen', 'taskRed'],
+	template: (e) => {
+		return '<li>' + e + '</li>'
+	},
+	init: () => {
+		for (let key in G_APP.list) {
+			if (G_APP.list.hasOwnProperty(key)) {
+				let element = G_APP.list[key];
+				$('#' + element).append(G_APP.createList())
+				G_APP.enableSortAble(element)
 
-	// List with handle
-	var sortCyan = new Sortable(taskCyan,{
-		group: {name: "task-table",pull: true,put: false},
-	})
-	var sortGreen =new Sortable(taskGreen,{
-		group: {name: "task-table",pull: true,put: true},
-	})
-	var sortRed =new Sortable(taskRed,{
-		group: {name: "task-table",pull: false,put: true},
-	})
+			}
+		}
+	},
+	createList: () => {
+		let tmp = [];
+		for (let key in data) {
+			if (data.hasOwnProperty(key)) {
+				const element = data[key].name;
+				tmp.push(G_APP.template(element));
+				console.log(element);
+			}
+		}
+		return tmp
+	},
+	enableSortAble: (e) => {
+		let el = document.getElementById(e)
+		let sortable = Sortable.create(el, {
+
+			group: "name",
+			onEnd: (evt) => {
+				console.log('Finish', evt)
+			},
+			onUpdate: (evt) => {
+				console.log('Update', evt)
+			},
+			onSort: (evt) => {
+				console.log('Sort', evt)
+			},
+		})
+	},
+
+
+
 }
+G_APP.init()
 
 
 

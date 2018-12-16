@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	#app
+		.container
+			.row
+				.col
+					h1.my-5.mx-5 Login 
+					form(action="/check", method="POST").my-5.mx-5
+						.form-group
+							label(for='exampleInputEmail1') Username
+							input#exampleInputEmail1.form-control(type='text',name="username", aria-describedby='emailHelp', placeholder='Username')
+						.form-group
+							label(for='exampleInputPassword1') Password
+							input#exampleInputPassword1.form-control(type='password',name="password", placeholder='Password')
+					
+						button.btn.btn-primary(type='submit') Submit
